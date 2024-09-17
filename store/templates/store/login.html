@@ -1,0 +1,85 @@
+{% extends "store/base.html" %}
+{% block content %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-inner">
+            <ul class="list-inline list-unstyled">
+                <li><a href="home.html">Home</a></li>
+                <li class='active'>Login</li>
+            </ul>
+        </div><!-- /.breadcrumb-inner -->
+    </div><!-- /.container -->
+</div><!-- /.breadcrumb -->
+
+<div class="body-content">
+    <div class="container">
+        <div class="sign-in-page">
+            <div class="row" style="display: flex; justify-content: center; align-items: center; min-height: 80vh; margin: -80px;">
+                <!-- Sign-in -->            
+                <div class="col-md-6 col-sm-6 sign-in" style="display: flex; justify-content: center; align-items: center; margin: 0;">
+                    <div style="width: 100%; max-width: 500px; margin-top: 10px;">
+                        <h4 class="">Sign in</h4>
+                        {% if messages %}
+                            <div class="messages">
+                                {% for message in messages %}
+                                    <div style="
+                                        padding: 10px;
+                                        margin: 10px 0;
+                                        border-radius: 5px;
+                                        {% if message.tags == 'success' %}
+                                            background-color: #dff0d8;
+                                            color: #3c763d;
+                                        {% elif message.tags == 'error' %}
+                                            background-color: #f2dede;
+                                            color: #a94442;
+                                        {% elif message.tags == 'info' %}
+                                            background-color: #d9edf7;
+                                            color: #31708f;
+                                        {% elif message.tags == 'warning' %}
+                                            background-color: #fcf8e3;
+                                            color: #8a6d3b;
+                                        {% endif %}
+                                    ">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <form class="register-form outer-top-xs" role="form" method="post" action="{% url "login" %}" style="
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        ">
+                            {% csrf_token %}
+                            <div class="form-group" style="width: 100%; margin-bottom: 15px;">
+                                <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
+                                <input type="text" class="form-control unicase-form-control text-input" id="exampleInputEmail1" name="username" style="width: 100%;">
+                            </div>
+                            <div class="form-group" style="width: 100%; margin-bottom: 15px;">
+                                <label class="info-title" for="exampleInputPassword1">Password <span>*</span></label>
+                                <input type="password" class="form-control unicase-form-control text-input" id="exampleInputPassword1" name="password" style="width: 100%;">
+                            </div>
+                            <div class="radio outer-xs" style="width: 100%; margin-bottom: 15px;">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Remember me!
+                                </label>
+                                <a href="#" class="forgot-password pull-right">Forgot your Password?</a>
+                            </div>
+                            <button type="submit" class="btn-upper btn btn-primary checkout-page-button" style="width: 100%;">Login</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Sign-in -->
+
+                <!-- create a new account -->
+                
+                <!-- create a new account -->            
+            </div><!-- /.row -->
+        </div><!-- /.sign-in-page -->
+        <!-- ============================================== BRANDS CAROUSEL ============================================== -->
+
+        <!-- ============================================== BRANDS CAROUSEL : END ============================================== -->
+    </div><!-- /.container -->
+</div><!-- /.body-content -->
+{% endblock content %}

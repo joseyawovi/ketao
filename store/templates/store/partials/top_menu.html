@@ -1,0 +1,45 @@
+<!-- ============================================== TOP MENU ============================================== -->
+<div class="top-bar animate-dropdown">
+<br/>
+
+  <div class="container">
+      <div class="header-top-inner">
+          <div class="cnt-blok" style="text-align: right;">
+              <ul class="list-unstyled list-inline" style="display: inline-block;">
+                  {% if user.is_authenticated %}
+                      <li class="dropdown dropdown-small"> 
+                          <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" style="color: white; font-size: 18px;">
+                              <i class="fas fa-user" style="font-size: 24px; margin-right: 5px;"></i><span class="value">{{ user.first_name }} {{ user.last_name }}</span><b class="caret" style="border-top-color: white;"></b>
+                          </a>
+                          <ul class="dropdown-menu" style="right: 0; left: auto;">
+                              <li class="wishlist"><a href="#"><span>Wishlist</span></a></li>
+                              <li class="header_cart hidden-xs"><a href="#"><span>My Cart</span></a></li>
+                              <li class="check"><a href="#"><span>Checkout</span></a></li>
+                              <li class="myaccount"><a href="{% url 'logout' %}"><span>Logout</span></a></li>
+                          </ul>
+                      </li>
+                  {% else %}
+                      <li class="dropdown dropdown-small"> 
+                          <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" style="color: white; font-size: 18px;">
+                              <i class="fas fa-user" style="font-size: 24px; margin-right: 5px;"></i><span class="value">My Account</span><b class="caret" style="border-top-color: white;"></b>
+                          </a>
+                          <ul class="dropdown-menu" style="right: 0; left: auto;">
+                              <li class="myaccount"><a href="{% url 'login' %}"><span>Login</span></a></li>
+                              <li class="myaccount"><a href="{% url 'register' %}"><span>Signup</span></a></li>
+                          </ul>
+                      </li>
+                  {% endif %}
+              </ul>
+              <!-- /.list-unstyled -->
+          </div>
+          <!-- /.cnt-account -->
+
+          <!-- /.cnt-cart -->
+          <div class="clearfix"></div>
+      </div>
+      <!-- /.header-top-inner -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.header-top -->
+<!-- ============================================== TOP MENU : END ============================================== -->

@@ -1,0 +1,117 @@
+{% extends "store/base.html" %}
+{% block content %}
+<div class="breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-inner">
+            <ul class="list-inline list-unstyled">
+                <li><a href="home.html">Home</a></li>
+                <li class='active'>Create Account</li>
+            </ul>
+        </div><!-- /.breadcrumb-inner -->
+    </div><!-- /.container -->
+</div><!-- /.breadcrumb -->
+
+<div class="body-content">
+    <div class="container">
+        <div class="sign-in-page">
+            <div class="row"
+                style="display: flex; justify-content: center; align-items: center; min-height: 80vh; margin: 0;">
+                <!-- Create New Account -->
+                <div class="col-md-6 col-sm-6 create-new-account"
+                    style="display: flex; justify-content: center; align-items: center; margin: 0;">
+                    <div style="width: 100%; max-width: 500px; margin-top: 10px;">
+                        <h4 class="checkout-subtitle">Create a new account</h4>
+                        <p class="text title-tag-line">
+                            {% if messages %}
+                            <div class="messages">
+                                {% for message in messages %}
+                                <div style="
+                                        padding: 10px;
+                                        margin: 10px 0;
+                                        border-radius: 5px;
+                                        {% if message.tags == 'success' %}
+                                            background-color: #dff0d8;
+                                            color: #3c763d;
+                                        {% elif message.tags == 'error' %}
+                                            background-color: #f2dede;
+                                            color: #a94442;
+                                        {% elif message.tags == 'info' %}
+                                            background-color: #d9edf7;
+                                            color: #31708f;
+                                        {% elif message.tags == 'warning' %}
+                                            background-color: #fcf8e3;
+                                            color: #8a6d3b;
+                                        {% endif %}
+                                    ">
+                                    {{ message }}
+                                </div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </p>
+                        <form class="register-form outer-top-xs" method="post" action="{% url 'register' %}" style="
+                         display: flex; flex-direction: column; align-items: center;">
+                            {% csrf_token %}
+
+                            <div class="form-group" style="width: 100%; margin-bottom: 15px;">
+                                <label class="info-title" for="id_email">Email Address <span>*</span></label>
+                                {{ form.email }}
+                                {% if form.email.errors %}
+                                <div style="color: red; font-size: 0.875em; margin-top: 5px;">
+                                    {{ form.email.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="form-group" style="width: 100%; margin-bottom: 15px;">
+                                <label class="info-title" for="id_first_name">Name <span>*</span></label>
+                                {{ form.first_name }}
+                                {% if form.first_name.errors %}
+                                <div style="color: red; font-size: 0.875em; margin-top: 5px;">
+                                    {{ form.first_name.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="form-group" style="width: 100%; margin-bottom: 15px;">
+                                <label class="info-title" for="id_phone">Phone Number <span>*</span></label>
+                                {{ form.phone }}
+                                {% if form.phone.errors %}
+                                <div style="color: red; font-size: 0.875em; margin-top: 5px;">
+                                    {{ form.phone.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="form-group" style="width: 100%; margin-bottom: 15px;">
+                                <label class="info-title" for="id_password1">Password <span>*</span></label>
+                                {{ form.password1 }}
+                                {% if form.password1.errors %}
+                                <div style="color: red; font-size: 0.875em; margin-top: 5px;">
+                                    {{ form.password1.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="form-group" style="width: 100%; margin-bottom: 15px;">
+                                <label class="info-title" for="id_password2">Confirm Password <span>*</span></label>
+                                {{ form.password2 }}
+                                {% if form.password2.errors %}
+                                <div style="color: red; font-size: 0.875em; margin-top: 5px;">
+                                    {{ form.password2.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <button type="submit" class="btn-upper btn btn-primary checkout-page-button"
+                                style="width: 100%;">Sign Up</button>
+                        </form>
+
+                    </div>
+                </div>
+                <!-- Create New Account -->
+            </div><!-- /.row -->
+        </div><!-- /.sign-in-page -->
+    </div><!-- /.container -->
+</div><!-- /.body-content -->
+{% endblock content %}
