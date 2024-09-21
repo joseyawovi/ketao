@@ -495,7 +495,7 @@
                                         </div>
                         
                                         <div class="add-btn">
-                                            <a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+                                            <button  type="button" value={{product.id}} class="btn btn-primary" id="add-cart"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</button>
                                         </div>
                                     </div><!-- /.row -->
                                 </div><!-- /.quantity-container -->
@@ -504,7 +504,32 @@
                         </div><!-- /.col-sm-7 -->
                         
                     </div><!-- /.row -->
-                </div>
+                </div> 
+
+                <script>
+                    // Wait until the document is fully loaded
+                    $(document).on('click', '#add-cart', function(e) {
+                        e.preventDefault();  // Correct spelling of preventDefault
+                
+                        $.ajax({
+                            type: 'POST',
+                            url: "{% url 'cart_add' %}",  // Ensure correct URL from Django
+                            data: {
+                                'product_id': $('#add-cart').val(),  // Use valid JavaScript object key format
+                                'csrfmiddlewaretoken': '{{ csrf_token }}',  // Pass the CSRF token
+                                'action': 'post'
+                            },
+                            success: function(json) {
+                                console.log(json);  // Log the response
+                                document.getElementById('cart_quantity').textContent = json.qty
+                            },
+                            error: function(xhr, errmsg, err) {
+                                console.log(xhr.status + ": " + xhr.responseText);  // Log errors
+                            }
+                        });
+                    });
+                </script>
+                
 
                 {% comment %} <div class="product-tabs inner-bottom-xs">
                     <div class="row">

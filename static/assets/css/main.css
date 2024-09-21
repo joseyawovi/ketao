@@ -7379,4 +7379,28 @@ li.dropdown.navbar-right.special-menu {
   .sidebar {
       display: none;
   }
+  
 }
+
+
+.header-style-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* Add padding to the body or next section to create space for the fixed header */
+body {
+  padding-top: 200px; 
+}
+@media (max-width: 768px) {
+  body {
+      padding-top: 360px;
+  }
+
+  
+
+
+}
+
