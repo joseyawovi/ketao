@@ -254,7 +254,7 @@
 
                 </div>
             </div><!-- /.sidebar -->
-           
+
             <div class='col-xs-12 col-sm-12 col-md-9 rht-col'>
                 <div class="detail-block">
                     <div class="row">
@@ -262,148 +262,164 @@
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 gallery-holder">
                             <div class="product-item-holder size-big single-product-gallery small-gallery">
 
-
                                 <div id="owl-single-product">
                                     <!-- Principal image -->
                                     <div class="single-product-gallery-item" id="slide1">
-                                        <a data-lightbox="image-1" data-title="Gallery" href="{{ product.principal_image.url }}">
-                                            <img class="img-responsive" alt="{{ product.name }}" src="/static/assets/images/blank.gif"
+                                        <a data-lightbox="image-1" data-title="Gallery"
+                                            href="{{ product.principal_image.url }}">
+                                            <img class="img-responsive" alt="{{ product.name }}"
+                                                src="/static/assets/images/blank.gif"
                                                 data-echo="{{ product.principal_image.url }}" />
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
-                                
+
                                     <!-- Hover image -->
                                     {% if product.hover_image %}
                                     <div class="single-product-gallery-item" id="slide2">
-                                        <a data-lightbox="image-1" data-title="Gallery" href="{{ product.hover_image.url }}">
-                                            <img class="img-responsive" alt="{{ product.name }} hover" src="/static/assets/images/blank.gif"
+                                        <a data-lightbox="image-1" data-title="Gallery"
+                                            href="{{ product.hover_image.url }}">
+                                            <img class="img-responsive" alt="{{ product.name }} hover"
+                                                src="/static/assets/images/blank.gif"
                                                 data-echo="{{ product.hover_image.url }}" />
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
                                     {% endif %}
-                                
+
                                     <!-- Additional images -->
                                     {% if product.additional_image_1 %}
                                     <div class="single-product-gallery-item" id="slide3">
-                                        <a data-lightbox="image-1" data-title="Gallery" href="{{ product.additional_image_1.url }}">
+                                        <a data-lightbox="image-1" data-title="Gallery"
+                                            href="{{ product.additional_image_1.url }}">
                                             <img class="img-responsive" alt="{{ product.name }} additional image 1"
-                                                src="/static/assets/images/blank.gif" data-echo="{{ product.additional_image_1.url }}" />
+                                                src="/static/assets/images/blank.gif"
+                                                data-echo="{{ product.additional_image_1.url }}" />
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
                                     {% endif %}
-                                
+
                                     {% if product.additional_image_2 %}
                                     <div class="single-product-gallery-item" id="slide4">
-                                        <a data-lightbox="image-1" data-title="Gallery" href="{{ product.additional_image_2.url }}">
+                                        <a data-lightbox="image-1" data-title="Gallery"
+                                            href="{{ product.additional_image_2.url }}">
                                             <img class="img-responsive" alt="{{ product.name }} additional image 2"
-                                                src="/static/assets/images/blank.gif" data-echo="{{ product.additional_image_2.url }}" />
+                                                src="/static/assets/images/blank.gif"
+                                                data-echo="{{ product.additional_image_2.url }}" />
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
                                     {% endif %}
-                                
+
                                     {% if product.additional_image_3 %}
                                     <div class="single-product-gallery-item" id="slide5">
-                                        <a data-lightbox="image-1" data-title="Gallery" href="{{ product.additional_image_3.url }}">
+                                        <a data-lightbox="image-1" data-title="Gallery"
+                                            href="{{ product.additional_image_3.url }}">
                                             <img class="img-responsive" alt="{{ product.name }} additional image 3"
-                                                src="/static/assets/images/blank.gif" data-echo="{{ product.additional_image_3.url }}" />
+                                                src="/static/assets/images/blank.gif"
+                                                data-echo="{{ product.additional_image_3.url }}" />
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
                                     {% endif %}
-                                
+
                                     {% if product.additional_image_4 %}
                                     <div class="single-product-gallery-item" id="slide6">
-                                        <a data-lightbox="image-1" data-title="Gallery" href="{{ product.additional_image_4.url }}">
+                                        <a data-lightbox="image-1" data-title="Gallery"
+                                            href="{{ product.additional_image_4.url }}">
                                             <img class="img-responsive" alt="{{ product.name }} additional image 4"
-                                                src="/static/assets/images/blank.gif" data-echo="{{ product.additional_image_4.url }}" />
+                                                src="/static/assets/images/blank.gif"
+                                                data-echo="{{ product.additional_image_4.url }}" />
                                         </a>
                                     </div><!-- /.single-product-gallery-item -->
                                     {% endif %}
                                 </div><!-- /.single-product-slider -->
-                                
+
                                 <div class="single-product-gallery-thumbs gallery-thumbs">
                                     <div id="owl-single-product-thumbnails">
                                         <!-- Principal Image Thumbnail -->
                                         <div class="item">
-                                            <a class="horizontal-thumb active" data-target="#owl-single-product" data-slide="1" href="#slide1">
-                                                <img class="img-responsive" alt="{{ product.name }}" src="/static/assets/images/blank.gif"
+                                            <a class="horizontal-thumb active" data-target="#owl-single-product"
+                                                data-slide="1" href="#slide1">
+                                                <img class="img-responsive" alt="{{ product.name }}"
+                                                    src="/static/assets/images/blank.gif"
                                                     data-echo="{{ product.principal_image.url }}" />
                                             </a>
                                         </div>
-                                
+
                                         <!-- Hover Image Thumbnail (if available) -->
                                         {% if product.hover_image %}
                                         <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2" href="#slide2">
-                                                <img class="img-responsive" alt="{{ product.name }} hover" src="/static/assets/images/blank.gif"
+                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="2"
+                                                href="#slide2">
+                                                <img class="img-responsive" alt="{{ product.name }} hover"
+                                                    src="/static/assets/images/blank.gif"
                                                     data-echo="{{ product.hover_image.url }}" />
                                             </a>
                                         </div>
                                         {% endif %}
-                                
+
                                         <!-- Additional Image 1 Thumbnail (if available) -->
                                         {% if product.additional_image_1 %}
                                         <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="3" href="#slide3">
-                                                <img class="img-responsive" alt="{{ product.name }} additional image 1" src="/static/assets/images/blank.gif"
+                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="3"
+                                                href="#slide3">
+                                                <img class="img-responsive" alt="{{ product.name }} additional image 1"
+                                                    src="/static/assets/images/blank.gif"
                                                     data-echo="{{ product.additional_image_1.url }}" />
                                             </a>
                                         </div>
                                         {% endif %}
-                                
+
                                         <!-- Additional Image 2 Thumbnail (if available) -->
                                         {% if product.additional_image_2 %}
                                         <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="4" href="#slide4">
-                                                <img class="img-responsive" alt="{{ product.name }} additional image 2" src="/static/assets/images/blank.gif"
+                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="4"
+                                                href="#slide4">
+                                                <img class="img-responsive" alt="{{ product.name }} additional image 2"
+                                                    src="/static/assets/images/blank.gif"
                                                     data-echo="{{ product.additional_image_2.url }}" />
                                             </a>
                                         </div>
                                         {% endif %}
-                                
+
                                         <!-- Additional Image 3 Thumbnail (if available) -->
                                         {% if product.additional_image_3 %}
                                         <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="5" href="#slide5">
-                                                <img class="img-responsive" alt="{{ product.name }} additional image 3" src="/static/assets/images/blank.gif"
+                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="5"
+                                                href="#slide5">
+                                                <img class="img-responsive" alt="{{ product.name }} additional image 3"
+                                                    src="/static/assets/images/blank.gif"
                                                     data-echo="{{ product.additional_image_3.url }}" />
                                             </a>
                                         </div>
                                         {% endif %}
-                                
+
                                         <!-- Additional Image 4 Thumbnail (if available) -->
                                         {% if product.additional_image_4 %}
                                         <div class="item">
-                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="6" href="#slide6">
-                                                <img class="img-responsive" alt="{{ product.name }} additional image 4" src="/static/assets/images/blank.gif"
+                                            <a class="horizontal-thumb" data-target="#owl-single-product" data-slide="6"
+                                                href="#slide6">
+                                                <img class="img-responsive" alt="{{ product.name }} additional image 4"
+                                                    src="/static/assets/images/blank.gif"
                                                     data-echo="{{ product.additional_image_4.url }}" />
                                             </a>
                                         </div>
                                         {% endif %}
                                     </div><!-- /#owl-single-product-thumbnails -->
                                 </div><!-- /.gallery-thumbs -->
-                                
-
-
-
-                                
 
                             </div><!-- /.single-product-gallery -->
                         </div><!-- /.gallery-holder -->
-
-
-
 
                         <div class='col-sm-12 col-md-8 col-lg-8 product-info-block'>
                             <div class="product-info">
                                 <!-- Product Name -->
                                 <h1 class="name">{{ product.name }}</h1>
-                        
+
                                 <!-- Rating and Reviews -->
                                 <div class="rating-reviews m-t-20">
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="pull-left">
-                                                <div class="rating rateit-small"></div> <!-- Implement rating logic here -->
+                                                <div class="rating rateit-small"></div>
+                                                <!-- Implement rating logic here -->
                                             </div>
                                             <div class="pull-left">
                                                 <div class="reviews">
@@ -413,7 +429,7 @@
                                         </div>
                                     </div><!-- /.row -->
                                 </div><!-- /.rating-reviews -->
-                        
+
                                 <!-- Stock Availability -->
                                 <div class="stock-container info-container m-t-10">
                                     <div class="row">
@@ -427,9 +443,9 @@
                                                 <div class="stock-box">
                                                     <span class="value">
                                                         {% if product.stock > 0 %}
-                                                            In Stock
+                                                        In Stock
                                                         {% else %}
-                                                            Out of Stock
+                                                        Out of Stock
                                                         {% endif %}
                                                     </span>
                                                 </div>
@@ -437,12 +453,12 @@
                                         </div>
                                     </div><!-- /.row -->
                                 </div><!-- /.stock-container -->
-                        
+
                                 <!-- Product Description -->
                                 <div class="description-container m-t-20">
                                     <p>{{ product.description }}</p>
                                 </div><!-- /.description-container -->
-                        
+
                                 <!-- Price Section -->
                                 <div class="price-container info-container m-t-30">
                                     <div class="row">
@@ -450,34 +466,37 @@
                                             <div class="price-box">
                                                 <span class="price">${{ product.price }}</span>
                                                 {% if product.sale %}
-                                                    <span class="price-strike">${{ product.original_price }}</span>
+                                                <span class="price-strike">${{ product.original_price }}</span>
                                                 {% endif %}
                                             </div>
                                         </div>
-                        
+
                                         <div class="col-sm-6 col-xs-6">
                                             <div class="favorite-button m-t-5">
-                                                <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Wishlist" href="#">
+                                                <a class="btn btn-primary" data-toggle="tooltip" data-placement="right"
+                                                    title="Wishlist" href="#">
                                                     <i class="fa fa-heart"></i>
                                                 </a>
-                                                <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add to Compare" href="#">
+                                                <a class="btn btn-primary" data-toggle="tooltip" data-placement="right"
+                                                    title="Add to Compare" href="#">
                                                     <i class="fa fa-signal"></i>
                                                 </a>
-                                                <a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="E-mail" href="#">
+                                                <a class="btn btn-primary" data-toggle="tooltip" data-placement="right"
+                                                    title="E-mail" href="#">
                                                     <i class="fa fa-envelope"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div><!-- /.row -->
                                 </div><!-- /.price-container -->
-                        
+
                                 <!-- Quantity Selector and Add to Cart -->
                                 <div class="quantity-container info-container">
                                     <div class="row">
                                         <div class="qty">
                                             <span class="label">Qty :</span>
                                         </div>
-                        
+
                                         <div class="qty-count">
                                             <div class="cart-quantity">
                                                 <div class="quant-input">
@@ -489,47 +508,56 @@
                                                             <span class="ir"><i class="icon fa fa-sort-desc"></i></span>
                                                         </div>
                                                     </div>
-                                                    <input type="text" value="1">
+                                                    <input type="text" value="1" id="qty-cart">
                                                 </div>
                                             </div>
                                         </div>
-                        
+
                                         <div class="add-btn">
-                                            <button  type="button" value={{product.id}} class="btn btn-primary" id="add-cart"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</button>
+                                            <button type="button" value={{product.id}} class="btn btn-primary"
+                                                id="add-cart"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO
+                                                CART</button>
+                                            <div id="success-message" style="display: none;" class="alert alert-success text-center"></div>
+
                                         </div>
                                     </div><!-- /.row -->
                                 </div><!-- /.quantity-container -->
-                        
+
                             </div><!-- /.product-info -->
                         </div><!-- /.col-sm-7 -->
-                        
+
                     </div><!-- /.row -->
-                </div> 
+                </div>
 
                 <script>
-                    // Wait until the document is fully loaded
+                    // Quantity increment logic
                     $(document).on('click', '#add-cart', function(e) {
-                        e.preventDefault();  // Correct spelling of preventDefault
-                
+                        e.preventDefault(); 
+                        let productQty = $('#qty-cart').val(); // Capture the quantity value when button is clicked
+                    
                         $.ajax({
                             type: 'POST',
-                            url: "{% url 'cart_add' %}",  // Ensure correct URL from Django
+                            url: "{% url 'cart_add' %}", 
                             data: {
-                                'product_id': $('#add-cart').val(),  // Use valid JavaScript object key format
-                                'csrfmiddlewaretoken': '{{ csrf_token }}',  // Pass the CSRF token
+                                'product_id': $('#add-cart').val(), 
+                                'product_qty': productQty, 
+                                'csrfmiddlewaretoken': '{{ csrf_token }}', 
                                 'action': 'post'
                             },
                             success: function(json) {
-                                console.log(json);  // Log the response
-                                document.getElementById('cart_quantity').textContent = json.qty
+                                console.log(json);
+                                document.getElementById('cart_quantity').textContent = json.qty; // Update cart quantity
+                                
+                                // Show the success message
+                                $('#success-message').text('Product successfully added to cart!').show().delay(3000).fadeOut();
                             },
                             error: function(xhr, errmsg, err) {
-                                console.log(xhr.status + ": " + xhr.responseText);  // Log errors
+                                console.log(xhr.status + ": " + xhr.responseText); 
                             }
                         });
                     });
+                    
                 </script>
-                
 
                 {% comment %} <div class="product-tabs inner-bottom-xs">
                     <div class="row">
@@ -721,86 +749,95 @@
                 </div><!-- /.product-tabs --> {% endcomment %}
 
                 <!-- ============================================== UPSELL PRODUCTS ============================================== -->
-<section class="section featured-product">
-    <div class="row">
-        <div class="col-lg-3">
-            <h3 class="section-title">Upsell Products</h3>
-            <div class="ad-imgs">
-                <img class="img-responsive" src="/static/assets/images/banners/home-banner1.jpg" alt="">
-                <img class="img-responsive" src="/static/assets/images/banners/home-banner2.jpg" alt="">
-            </div>
-        </div>
-        <div class="col-lg-9">
-            <div class="owl-carousel homepage-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
-
-                
-
-                {% for product in upsell_products%}
-                <div class="item item-carousel">
-                  <div class="products">
-                    <div class="product">
-                      <div class="product-image">
-                        <div class="image"> 
-                         <a href="{% url 'product_detail' product.slug %}">
-                           <img src="{{ product.principal_image.url }}" alt=""> 
-                           {% if product.hover_image %} <img src="{{ product.hover_image.url }}" alt="" class="hover-image">{% endif %}
-                        </a>
-                         </div>
-                        <!-- /.image -->
-    
-                       {% if product.hot and product.sale %}
-                        <div class="tag hot"><span>hot</span></div>
-                       {% elif product.hot %}
-                        <div class="tag hot"><span>hot</span></div>
-                       {% elif product.sale %}
-                       <div class="tag sale"><span>sale</span></div>
-                       {% else %}
-                       <div class="tag new"><span>new</span></div>
-                       {% endif %}
-                        
-                      </div>
-                      <!-- /.product-image -->
-                      
-                      <div class="product-info text-left">
-                        <h3 class="name"><a href="detail.html">{{product.name}}</a></h3>
-                        <div class="rating rateit-small"></div>
-                        <div class="description"></div>
-                        <div class="product-price"> <span class="price"> ${{product.price}}</span> <span class="price-before-discount">$ 800</span> </div>
-                        <!-- /.product-price --> 
-                        
-                      </div> 
-                      <!-- /.product-info -->
-                      {% comment %} <div class="cart clearfix animate-effect">
-                        <div class="action">
-                          <ul class="list-unstyled">
-                            <li class="add-cart-button btn-group">
-                              <a href="{% url 'product_detail' product.slug %}">
-                              <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i class="fa fa-shopping-cart"></i> </button>
-                              <button class="btn btn-primary cart-btn" type="button">  Add to cart</button>
-                            </a>
-                            </li>
-                            <li class="lnk wishlist"> <a class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-                            <li class="lnk"> <a class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-                          </ul>
+                <section class="section featured-product">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <h3 class="section-title">Upsell Products</h3>
+                            <div class="ad-imgs">
+                                <img class="img-responsive" src="/static/assets/images/banners/home-banner1.jpg" alt="">
+                                <img class="img-responsive" src="/static/assets/images/banners/home-banner2.jpg" alt="">
+                            </div>
                         </div>
-                        <!-- /.action --> 
-                      </div> {% endcomment %}
-                      <!-- /.cart --> 
+                        <div class="col-lg-9">
+                            <div
+                                class="owl-carousel homepage-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
+
+                                {% for product in upsell_products%}
+                                <div class="item item-carousel">
+                                    <div class="products">
+                                        <div class="product">
+                                            <div class="product-image">
+                                                <div class="image">
+                                                    <a href="{% url 'product_detail' product.slug %}">
+                                                        <img src="{{ product.principal_image.url }}" alt="">
+                                                        {% if product.hover_image %} <img
+                                                            src="{{ product.hover_image.url }}" alt=""
+                                                            class="hover-image">{% endif %}
+                                                    </a>
+                                                </div>
+                                                <!-- /.image -->
+
+                                                {% if product.hot and product.sale %}
+                                                <div class="tag hot"><span>hot</span></div>
+                                                {% elif product.hot %}
+                                                <div class="tag hot"><span>hot</span></div>
+                                                {% elif product.sale %}
+                                                <div class="tag sale"><span>sale</span></div>
+                                                {% else %}
+                                                <div class="tag new"><span>new</span></div>
+                                                {% endif %}
+
+                                            </div>
+                                            <!-- /.product-image -->
+
+                                            <div class="product-info text-left">
+                                                <h3 class="name"><a href="detail.html">{{product.name}}</a></h3>
+                                                <div class="rating rateit-small"></div>
+                                                <div class="description"></div>
+                                                <div class="product-price"> <span class="price">
+                                                        ${{product.price}}</span> <span class="price-before-discount">$
+                                                        800</span> </div>
+                                                <!-- /.product-price -->
+
+                                            </div>
+                                            <!-- /.product-info -->
+                                            {% comment %} <div class="cart clearfix animate-effect">
+                                                <div class="action">
+                                                    <ul class="list-unstyled">
+                                                        <li class="add-cart-button btn-group">
+                                                            <a href="{% url 'product_detail' product.slug %}">
+                                                                <button class="btn btn-primary icon"
+                                                                    data-toggle="dropdown" type="button"> <i
+                                                                        class="fa fa-shopping-cart"></i> </button>
+                                                                <button class="btn btn-primary cart-btn" type="button">
+                                                                    Add to cart</button>
+                                                            </a>
+                                                        </li>
+                                                        <li class="lnk wishlist"> <a class="add-to-cart"
+                                                                href="detail.html" title="Wishlist"> <i
+                                                                    class="icon fa fa-heart"></i> </a> </li>
+                                                        <li class="lnk"> <a class="add-to-cart" href="detail.html"
+                                                                title="Compare"> <i class="fa fa-signal"
+                                                                    aria-hidden="true"></i> </a> </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- /.action -->
+                                            </div> {% endcomment %}
+                                            <!-- /.cart -->
+                                        </div>
+                                        <!-- /.product -->
+
+                                    </div>
+                                    <!-- /.products -->
+                                </div>
+                                {% endfor %}
+                                <!-- /.item -->
+
+                            </div><!-- /.home-owl-carousel -->
+                        </div>
                     </div>
-                    <!-- /.product --> 
-                    
-                  </div>
-                  <!-- /.products --> 
-                </div>
-                {% endfor %}
-                <!-- /.item -->
-
-            </div><!-- /.home-owl-carousel -->
-        </div>
-    </div>
-</section><!-- /.section -->
-<!-- ============================================== UPSELL PRODUCTS : END ============================================== -->
-
+                </section><!-- /.section -->
+                <!-- ============================================== UPSELL PRODUCTS : END ============================================== -->
 
             </div><!-- /.col -->
             <div class="clearfix"></div>

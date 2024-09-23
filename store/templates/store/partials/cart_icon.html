@@ -10,7 +10,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <div class="cart-item product-summary">
+                                {% comment %} <div class="cart-item product-summary">
                                     <div class="row">
                                         <div class="col-xs-4">
                                             <div class="image"> <a href="detail.html"><img
@@ -26,13 +26,13 @@
                                 </div>
                                 <!-- /.cart-item -->
                                 <div class="clearfix"></div>
-                                <hr>
+                                <hr> {% endcomment %}
                                 <div class="clearfix cart-total">
-                                    <div class="pull-right"> <span class="text">Sub Total :</span><span
+                                    <div class="pull-right"> <span class="text">Total :</span><span
                                             class='price'>$600.00</span>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <a href="checkout.html"
+                                    <a href="{% url "cart_summary" %}"
                                         class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
                                 </div>
                                 <!-- /.cart-total-->

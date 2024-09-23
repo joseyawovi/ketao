@@ -9,7 +9,10 @@ def cart_summary(request):
     #get the products
     cart = Cart(request)
     cart_products = cart.get_prods()
-    context = {"cart_products":cart_products}
+    quantities = cart.get_quants()
+    context = {"cart_products":cart_products,
+               "quantities":quantities,
+               }
     return render(request,'cart/cart_view.html', context)
 
 def cart_add(request):
@@ -20,12 +23,12 @@ def cart_add(request):
     if request.POST.get('action')== 'post':
         #get stuff
         product_id = int(request.POST.get('product_id'))
-        
+        product_qty = int(request.POST.get('product_qty'))
         #look for the product in DB
         
         product = get_object_or_404(Product,id=product_id)
         #save the session
-        cart.add(product=product)
+        cart.add(product=product,quantity=product_qty)
         #return response
         #response = JsonResponse({'Product Name':product.name})
         #get cart quantity

@@ -1,0 +1,12 @@
+electronics{
+    Laptops{
+        gaming{
+            - ASUS TUF Gaming F17
+            -TUF Gaming A15
+        }
+        Desktop{
+            - HP Elitedesk PC 
+            - Rionix Rtrio 
+        }
+    }
+}
