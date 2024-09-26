@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from store.models import Category, SubCategory, SubSubCategory
 from django.utils.text import slugify
+import re
 
 class Command(BaseCommand):
     help = 'Populate the database with initial data'
@@ -55,23 +56,33 @@ class Command(BaseCommand):
             },
         }
 
+        # Function to clean up the slug
+        def create_slug(name, parent_slug=None):
+            base_slug = slugify(re.sub(r"[^\w\s-]", "", name))
+            if parent_slug:
+                return slugify(f"{parent_slug}-{base_slug}")
+            return base_slug
+
         # Add categories, subcategories, and subsubcategories to the database
         for category_name, subcategories in data.items():
-            category, created = Category.objects.get_or_create(name=category_name, slug=slugify(category_name))
+            category_slug = create_slug(category_name)
+            category, created = Category.objects.get_or_create(name=category_name, slug=category_slug)
             if created:
                 self.stdout.write(f'Created category: {category_name}')
             else:
                 self.stdout.write(f'Category already exists: {category_name}')
 
             for subcategory_name, subsubcategories in subcategories.items():
-                subcategory, created = SubCategory.objects.get_or_create(name=subcategory_name, category=category, slug=slugify(subcategory_name))
+                subcategory_slug = create_slug(subcategory_name, parent_slug=category_slug)
+                subcategory, created = SubCategory.objects.get_or_create(name=subcategory_name, category=category, slug=subcategory_slug)
                 if created:
                     self.stdout.write(f'Created subcategory: {subcategory_name}')
                 else:
                     self.stdout.write(f'Subcategory already exists: {subcategory_name}')
 
                 for subsubcategory_name in subsubcategories:
-                    subsubcategory, created = SubSubCategory.objects.get_or_create(name=subsubcategory_name, subcategory=subcategory, slug=slugify(subsubcategory_name))
+                    subsubcategory_slug = create_slug(subsubcategory_name, parent_slug=subcategory_slug)
+                    subsubcategory, created = SubSubCategory.objects.get_or_create(name=subsubcategory_name, subcategory=subcategory, slug=subsubcategory_slug)
                     if created:
                         self.stdout.write(f'Created subsubcategory: {subsubcategory_name}')
                     else:
