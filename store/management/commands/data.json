@@ -1,0 +1,242 @@
+{
+    "categories": [
+      {
+        "name": "Clothing",
+        "subcategories": [
+          {
+            "name": "Men's Clothing",
+            "subsubcategories": [
+              "Shirts",
+              "Pants",
+              "Jackets",
+              "Shorts",
+              "Suits"
+            ]
+          },
+          {
+            "name": "Women's Clothing",
+            "subsubcategories": [
+              "Dresses",
+              "Tops",
+              "Skirts",
+              "Coats",
+              "Activewear"
+            ]
+          },
+          {
+            "name": "Kids' Clothing",
+            "subsubcategories": [
+              "Boys' Clothing",
+              "Girls' Clothing",
+              "Infants' Clothing"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Electronics",
+        "subcategories": [
+          {
+            "name": "Laptops",
+            "subsubcategories": [
+              "Gaming",
+              "Business",
+              "Ultrabooks",
+              "2-in-1"
+            ]
+          },
+          {
+            "name": "Mobile Phones",
+            "subsubcategories": [
+              "Smartphones",
+              "Feature Phones",
+              "Accessories"
+            ]
+          },
+          {
+            "name": "Televisions",
+            "subsubcategories": [
+              "Smart TVs",
+              "4K TVs",
+              "OLED TVs"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Shoes",
+        "subcategories": [
+          {
+            "name": "Men's Shoes",
+            "subsubcategories": [
+              "Sneakers",
+              "Formal Shoes",
+              "Boots",
+              "Sandals"
+            ]
+          },
+          {
+            "name": "Women's Shoes",
+            "subsubcategories": [
+              "Heels",
+              "Flats",
+              "Boots",
+              "Sneakers"
+            ]
+          },
+          {
+            "name": "Kids' Shoes",
+            "subsubcategories": [
+              "Boys' Shoes",
+              "Girls' Shoes",
+              "Infants' Shoes"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Watches",
+        "subcategories": [
+          {
+            "name": "Men's Watches",
+            "subsubcategories": [
+              "Analog",
+              "Digital",
+              "Smart Watches"
+            ]
+          },
+          {
+            "name": "Women's Watches",
+            "subsubcategories": [
+              "Fashion Watches",
+              "Smart Watches"
+            ]
+          },
+          {
+            "name": "Kids' Watches",
+            "subsubcategories": [
+              "Analog",
+              "Digital"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jewellery",
+        "subcategories": [
+          {
+            "name": "Necklaces",
+            "subsubcategories": [
+              "Chains",
+              "Pendants",
+              "Chokers"
+            ]
+          },
+          {
+            "name": "Earrings",
+            "subsubcategories": [
+              "Hoops",
+              "Studs",
+              "Dangles"
+            ]
+          },
+          {
+            "name": "Bracelets",
+            "subsubcategories": [
+              "Bangles",
+              "Cuffs",
+              "Beaded"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Health and Beauty",
+        "subcategories": [
+          {
+            "name": "Skincare",
+            "subsubcategories": [
+              "Moisturizers",
+              "Cleansers",
+              "Sunscreens"
+            ]
+          },
+          {
+            "name": "Makeup",
+            "subsubcategories": [
+              "Face Makeup",
+              "Eye Makeup",
+              "Lip Makeup"
+            ]
+          },
+          {
+            "name": "Hair Care",
+            "subsubcategories": [
+              "Shampoos",
+              "Conditioners",
+              "Styling Products"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Home and Garden",
+        "subcategories": [
+          {
+            "name": "Furniture",
+            "subsubcategories": [
+              "Living Room Furniture",
+              "Bedroom Furniture",
+              "Office Furniture"
+            ]
+          },
+          {
+            "name": "Gardening",
+            "subsubcategories": [
+              "Tools",
+              "Plants",
+              "Decor"
+            ]
+          },
+          {
+            "name": "Kitchen",
+            "subsubcategories": [
+              "Cookware",
+              "Utensils",
+              "Appliances"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sports",
+        "subcategories": [
+          {
+            "name": "Outdoor Sports",
+            "subsubcategories": [
+              "Camping Gear",
+              "Hiking Equipment",
+              "Cycling"
+            ]
+          },
+          {
+            "name": "Team Sports",
+            "subsubcategories": [
+              "Football",
+              "Basketball",
+              "Baseball"
+            ]
+          },
+          {
+            "name": "Fitness",
+            "subsubcategories": [
+              "Gym Equipment",
+              "Yoga Gear",
+              "Wearable Fitness Tech"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
