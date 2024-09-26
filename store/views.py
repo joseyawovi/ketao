@@ -17,7 +17,7 @@ def home(request):
  
 def product(request, slug):
     product = Product.objects.get(slug=slug)
-    upsell_products = Product.objects.filter(subcategory=product.subcategory).exclude(id=product.id)[:10]
+    upsell_products = Product.objects.filter(subsubcategory=product.subsubcategory).exclude(id=product.id)[:10]
     
     context={
         "product":product,
